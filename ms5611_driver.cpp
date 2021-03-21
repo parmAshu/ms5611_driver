@@ -137,6 +137,11 @@ baro_ms5611 :: baro_ms5611(uint8_t SS_PIN = DEFAULT_SS)
 */
 void baro_ms5611 :: Initialize()
 {
+    pinMode( this->ss_pin, OUTPUT );
+    this->csb(HIGH);
+
+    delay(10);
+
     this->reset();
 
     for( uint8_t i=0; i<=5; i++ )

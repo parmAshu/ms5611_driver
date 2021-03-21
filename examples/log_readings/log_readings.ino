@@ -20,5 +20,6 @@ void loop()
     sensor.getPressure();
     Serial.println("Temperature (degC) : "+String(sensor.getTemperature_degC()));
     Serial.println("Pressure (mbar) : "+String(sensor.getPressure_mbar()));
-    Serial.println('*****************************\n');
+    Serial.println("*****************************\n");
+    delay(1000);
 }
